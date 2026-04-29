@@ -1,42 +1,50 @@
-# sv
+# Ever Beltrán
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Bilingual personal portfolio built with SvelteKit.
 
-## Creating a project
+This project is a minimalist personal website designed to present professional work across software development, writing, and research. It includes English and Spanish versions of the site and is structured as a lightweight content-first portfolio focused on clarity, readability, and maintainable front-end architecture.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Overview
 
-```sh
-# create a new project
-npx sv create my-app
-```
+The site serves as a personal portfolio and publication space, combining:
 
-To recreate this project with the same configuration:
+- technical projects
+- writing and research
+- academic and professional background
+- bilingual navigation (English / Spanish)
 
-```sh
-# recreate this project
-npx sv@0.15.1 create --template minimal --no-types --add prettier eslint --install npm .
-```
+Rather than functioning as a blog or template-heavy portfolio, the site is designed as a clean editorial interface with emphasis on content hierarchy, typographic consistency, and lightweight performance.
 
-## Developing
+## Built With
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- **SvelteKit** — application framework
+- **Svelte 5** — component architecture
+- **Bulma** — layout and responsive UI structure
+- **CSS** — custom editorial styling
+- **Netlify Adapter** — deployment target
 
-```sh
-npm run dev
+## Features
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+- bilingual routing (`/` and `/es`)
+- custom editorial homepage
+- portfolio project archive
+- writing archive with structured categories
+- academic CV (HTML + downloadable PDF)
+- responsive layout
+- lightweight static asset delivery
 
-## Building
+## Structure
 
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+src/routes/
+├── about
+├── contact
+├── cv
+├── projects
+├── writing
+└── es/
+    ├── about
+    ├── contact
+    ├── cv
+    ├── projects
+    └── writing
