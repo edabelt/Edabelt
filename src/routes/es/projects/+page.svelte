@@ -9,7 +9,24 @@
 				full-stack, sistemas de datos y diseño de aplicaciones orientadas a información.
 			</p>
 
-			<div class="columns is-multiline">
+			<div class="column is-half">
+	<div class="card writing-card">
+		<div class="card-content">
+			<p class="is-size-7 has-text-grey mb-2">SvelteKit · Full-Stack · Portfolio</p>
+			<h3 class="title is-5">edabelt</h3>
+			<p>
+				Sitio personal desarrollado con SvelteKit y Bulma para integrar escritura,
+				investigación y desarrollo en una arquitectura web ligera y bilingüe.
+			</p>
+			<p class="mt-3">
+				<a href="https://github.com/edabelt/edabelt" target="_blank">GitHub</a> ·
+				<a href="https://edabelt.netlify.app/" target="_blank">Demo en vivo</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+            <div class="columns is-multiline">
 				<div class="column is-half">
 					<div class="card writing-card">
 						<div class="card-content">
