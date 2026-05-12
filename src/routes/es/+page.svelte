@@ -1,7 +1,11 @@
 <main>
 	<section class="section is-medium">
 		<div class="container is-max-desktop hero-editorial">
-			<img class="portrait-cutout" src="/images/portrait.png" alt="Retrato de Ever David Beltrán Pinto" />
+			<img
+				class="portrait-cutout"
+				src="/images/portrait.png"
+				alt="Retrato de Ever David Beltrán Pinto"
+			/>
 
 			<p class="is-size-7 has-text-grey mb-5">Computación · Escritura · Investigación</p>
 
@@ -13,16 +17,16 @@
 
 			<div class="hero-copy">
 				<p class="is-size-5 intro-text">
-					Mi trabajo se halla en la intersección entre computación, investigación en cultura digital y la escritura creativa. En la práctica,
-					combino experiencia técnica en ciencias de la computación con trabajo editorial y
-					análisis filosófico para examinar cómo los sistemas digitales estructuran el
-					conocimiento y la comunicación.
+					Mi trabajo se halla en la intersección entre computación, investigación en cultura digital
+					y la escritura creativa. En la práctica, combino experiencia técnica en ciencias de la
+					computación con trabajo editorial y análisis filosófico para examinar cómo los sistemas
+					digitales estructuran el conocimiento y la comunicación.
 				</p>
 
 				<p class="is-size-5 intro-text">
-					Me interesa especialmente la inteligencia artificial como fenómeno técnico y
-					cultural: cómo transforma el conocimiento y la agencia, y qué preguntas éticas,
-					culturales y epistémicas emergen con su desarrollo.
+					Me interesa especialmente la inteligencia artificial como fenómeno técnico y cultural:
+					cómo transforma el conocimiento y la agencia, y qué preguntas éticas, culturales y
+					epistémicas emergen con su desarrollo.
 				</p>
 			</div>
 
@@ -54,4 +58,3 @@
 		</div>
 	</section>
 </main>
-

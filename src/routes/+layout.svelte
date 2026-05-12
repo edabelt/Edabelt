@@ -1,21 +1,21 @@
 <script>
 	import 'bulma/css/bulma.min.css';
 	import '../app.css';
-	import { page } from '$app/state';
+	import { page } from '$app/stores';
 
-	let { children } = $props();
-
-	const isSpanish = () => page.url.pathname.startsWith('/es');
+	const isSpanish = ($page) => $page.url.pathname.startsWith('/es');
 </script>
 
 <nav class="navbar px-5 py-4" role="navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item has-text-weight-semibold" href={isSpanish() ? '/es' : '/'}>EB</a>
+		<a class="navbar-item has-text-weight-semibold" href={isSpanish($page) ? '/es' : '/'}>
+			EB
+		</a>
 	</div>
 
 	<div class="navbar-menu is-active">
 		<div class="navbar-end">
-			{#if isSpanish()}
+			{#if isSpanish($page)}
 				<a class="navbar-item" href="/es/about">Sobre mí</a>
 				<a class="navbar-item" href="/es/cv">CV</a>
 				<a class="navbar-item" href="/es/writing">Escritura</a>
@@ -37,13 +37,13 @@
 	</div>
 </nav>
 
-{@render children()}
+<slot />
 
 <footer class="site-footer">
 	<div class="content has-text-centered">
 		<p class="mb-1">© 2026 Ever David Beltrán Pinto</p>
 
-		{#if isSpanish()}
+		{#if isSpanish($page)}
 			<p class="mb-1">Computación, investigación y escritura en cultura digital.</p>
 		{:else}
 			<p class="mb-1">Computing, research, and writing across digital culture.</p>
