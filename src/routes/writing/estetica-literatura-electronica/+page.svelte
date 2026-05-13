@@ -241,7 +241,8 @@
 	genre expands the boundaries of traditional storytelling, providing novel ways for readers to
 	interact with and shape the narrative.
 </p>
+			
 			</article>
-		</div>
+			</div>
 	</section>
 </main>
