@@ -340,7 +340,164 @@
 	precedentes.
 </p>
 
-                
+                <h2>Capítulo II</h2>
+<h3>Fundamentos éticos de la literatura</h3>
+
+<h3>Naturaleza ética del contenido literario</h3>
+
+<p>
+	Todos los esfuerzos en la evolución de la forma adquieren sentido porque sirven para conservar
+	y transmitir un contenido. La aparición del libro marcó un umbral decisivo en la preservación
+	de la forma, permitiendo desplazar la atención desde el mantenimiento del soporte hacia la
+	conservación del contenido transmitido. Comprender la naturaleza ética de este contenido es
+	esencial, pues este porta una sólida dimensión moral y educativa. La primera literatura escrita
+	encapsuló la sabiduría cultural acumulada por las tradiciones orales de distintas sociedades.
+	En consecuencia, estas obras heredaron las características religiosas, políticas y morales de
+	dichas tradiciones. En la Antigüedad, estas esferas se encontraban profundamente entrelazadas,
+	y las obras literarias fundacionales reflejaban con frecuencia esa interconexión.
+</p>
+
+<p>
+	A partir de la naturaleza de sus temas, podemos derivar los fundamentos del carácter ético del
+	contenido. En la esfera religiosa encontramos relatos cosmogónicos, como el Génesis en la
+	literatura bíblica y la <em>Teogonía</em> de Hesíodo en la cultura griega. Estos textos
+	fundacionales eran considerados sagrados, no simples creaciones humanas, sino revelaciones o
+	inspiraciones procedentes de la divinidad. Homero, por ejemplo, invoca a la musa con las
+	palabras: “Canta, oh diosa, la cólera de Aquiles, hijo de Peleo…” (Homero, 1999, 77). Esta
+	invocación subraya su supuesto origen divino y legitima su uso en prácticas cultuales.
+</p>
+
+<p>
+	Otro tema recurrente fue la narración de mitos heroicos cuyas gestas fundaban pueblos o
+	reinos. Estos héroes, al igual que líderes políticos como reyes o faraones, eran a menudo
+	considerados de naturaleza divina. Funcionaban como modelos cuya conducta debía ser imitada.
+	En la antigua Grecia, por ejemplo, las obras literarias inspiradas por las musas eran empleadas
+	para la educación moral, conocida como <em>paideia</em> —raíz de la palabra pedagogía—
+	(Jaeger, 1945, 3).
+</p>
+
+<p>
+	La crítica de Jenófanes a los poetas ofrece una vía indirecta para revelar el carácter ético
+	de la literatura fundacional: “Homero y Hesíodo han atribuido a los dioses todo aquello que
+	entre los hombres es vergonzoso y reprochable: robo, adulterio y engaño mutuo” (Jenófanes,
+	Fragmento 11, en Lesher, 1992, 68). Para el teólogo griego, resultaba inconcebible que una
+	imagen semejante de los dioses estuviera presente en textos destinados a la
+	<em>paideia</em>.
+</p>
+
+<p>
+	Estos son solo algunos ejemplos relevantes que sustentan el carácter ético del contenido
+	literario. La ética se refiere a la consecución de la excelencia en la vida o en un ámbito
+	determinado (Aristóteles, 2009, 109). Las escrituras literarias funcionaban como auténticos
+	códigos éticos, condensando normas para la asamblea pública, la vida privada y las prácticas
+	religiosas.
+</p>
+
+<p>
+	Sin embargo, la dimensión ética de la literatura no dependía únicamente de su carácter sagrado
+	o normativo, sino también de su dimensión educativa. Incluso en géneros posteriores y
+	desacralizados, como la tragedia griega, se preservaron las funciones morales y educativas de
+	la literatura. Para Aristóteles, el aspecto moral del dramaturgo se revela a través del
+	carácter: “El carácter es aquello que revela el propósito moral, mostrando qué tipo de cosas
+	un hombre elige o evita” (Aristóteles, 1922, Libro VI, 1450b). Además, la capacidad de
+	suscitar emociones como el temor y la compasión en el público desempeña un papel crucial; la
+	catarsis establece una conexión entre aprendizaje y transmisión emocional (Aristóteles, 1922,
+	Libro IX, 1452b). Estas emociones son esenciales: al experimentarlas, el público aprende en el
+	teatro lecciones que más tarde podrá aplicar a su propia vida.
+</p>
+
+<p>
+	Naturalmente, las obras fundacionales solían transmitir cuestiones religiosas. Sin embargo, la
+	educación moral constituye un rasgo intrínseco de la literatura a lo largo de la historia y en
+	diversas esferas. La literatura sigue siendo un poderoso medio para comunicar mensajes de
+	cambio, ya sea en favor de la libertad, del control o de otros fines. Al transmitir un mensaje,
+	los autores asumen una responsabilidad particular. Sartre subraya esta responsabilidad al
+	interrogar la intención del escritor: “Se tiene derecho a preguntar al escritor desde el
+	principio: ¿cuál es tu finalidad al escribir? ¿Tienes algo que decir? Es decir: algo que valga
+	la pena ser comunicado. Pero ¿qué queremos decir con algo que ‘vale la pena’ si no es mediante
+	el recurso a un sistema de valores trascendentes?” (Sartre, 1949, 21-22). Por tanto, la
+	escritura responsable implica identificar y comunicar estos sistemas de valores. Esta cuestión
+	ética también será pertinente para la creación de literatura electrónica.
+</p>
+
+<p>
+	Incluso en géneros aparentemente objetivos, como el costumbrismo o el naturalismo, donde el
+	autor pretende ofrecer un punto de vista neutral o simplemente describir la realidad,
+	permanece una dimensión activa. La literatura trata sobre lo que los personajes hacen dentro
+	de determinados grupos o sociedades. De hecho, la palabra “moral” procede del latín
+	<em>mos-moris</em>, que significa costumbres. Al presentar un conjunto de acciones individuales
+	o colectivas en una historia, el texto se convierte en un punto de vista, en un juicio sobre
+	ciertas realidades capaz de producir cambios. Sartre capta bien esta dinámica: “Si nombras la
+	conducta de un individuo, se la revelas; él se ve a sí mismo. Y como al mismo tiempo la estás
+	nombrando ante todos los demás, sabe que es visto en el momento en que se ve. Después de eso,
+	¿cómo esperar que actúe del mismo modo? O persistirá en su conducta por obstinación y con
+	pleno conocimiento de lo que hace, o la abandonará” (Sartre, 1949, 22).
+</p>
+
+<p>
+	Esta poderosa capacidad de la literatura para influir en la conducta plantea preocupaciones
+	éticas centrales dentro del campo. La literatura puede servir tanto como herramienta de
+	control como de liberación. Cuando se utiliza para el control, algunos autores, como George
+	Orwell, se refieren a ella como “literatura como propaganda” (Orwell, 1949). Por el contrario,
+	existe una larga tradición que subraya el potencial subversivo de la literatura. Pensadores
+	como Karl Marx (Marx, 1845), Georg Lukács (Lukács, 1962) y la Escuela de Frankfurt (Adorno y
+	Horkheimer, 1944) han contribuido de forma significativa a este debate, defendiendo el papel de
+	la literatura en el cuestionamiento de las normas sociales y las estructuras de poder. En
+	consecuencia, la literatura suele ser objeto de vigilancia y escrutinio por parte de las
+	autoridades, reflejo de su considerable impacto en la conducta y el pensamiento social.
+</p>
+
+<h3>Implicaciones éticas</h3>
+
+<p>
+	Debido a su carácter moral, las primeras ediciones afrontaron una dicotomía ética: por un lado,
+	mejoraron de manera significativa la accesibilidad de las tradiciones literarias, permitiendo
+	alcanzar a un público más amplio. El propio término “edición” refleja esta idea. Las palabras
+	para “edición” en distintas lenguas —como ἔκ-δοσις (<em>ek-dosis</em>) en griego,
+	<em>e-ditio</em> en latín y <em>Aus-gabe</em> en alemán— sugieren el acto de hacer público
+	algo. Implican trasladar un contenido desde un lugar restringido y menos accesible hacia otro
+	más visible y abierto. Most (2016, 168) explica que “las palabras para ‘edición’ en varias
+	lenguas pueden ofrecer una pista útil, pues comparten la sugerencia de dar algo a la gente, de
+	llevarlo de un interior a un exterior, de un lugar donde pocos pueden verlo, y quizá no sin
+	dificultad, a otro donde muchos pueden verlo, y con al menos algo más de comodidad”. Este
+	carácter diseminador explica por qué la labor de editar se ha asociado tradicionalmente con la
+	publicación (<em>publicare</em> en latín significa hacer público).
+</p>
+
+<p>
+	Por otro lado, la eficacia en la accesibilidad no garantiza por sí misma la rectitud del
+	contenido (Eagleton, 2008, 2). Las técnicas primitivas de reproducción manuscrita eran
+	laboriosas e imprecisas, lo que provocaba numerosas variaciones textuales en cada intento de
+	copia. En consecuencia, la literatura afrontó un desafío considerable en la conservación y
+	transmisión del contenido: el problema de la variación y la interpretación (Britannica, 2023).
+</p>
+
+<p>
+	Se implementaron diversas prácticas para minimizar los errores durante la transcripción. Una de
+	ellas fue la colación colaborativa, en la que grupos trabajaban para reducir equivocaciones y
+	confiar la tarea a individuos especializados. En la cultura hebrea, esta responsabilidad fue
+	asignada de manera exclusiva a los observantes de la escritura o fariseos. A pesar de estas
+	precauciones, los editores modificaban con frecuencia los textos según lo consideraban
+	necesario, y aun los esfuerzos más sofisticados por sistematizar criterios de modificación,
+	como ocurrió con los filólogos de Alejandría, resultaron insuficientes (Ibid.).
+</p>
+
+<p>
+	Las culturas tuvieron que afrontar y gestionar estos desafíos. El siguiente paso presentó sus
+	propios problemas: si las variaciones textuales eran inevitables, se necesitaban criterios
+	para seleccionar versiones autorizadas destinadas al uso público. Esta responsabilidad recaía a
+	menudo en instituciones dotadas de autoridad religiosa, política o de ambas (McDonald, 2007,
+	44). Bajo estas prácticas subyacía un problema ético fundamental en la literatura: la tensión
+	entre moderación y censura.
+</p>
+
+<p>
+	Estos problemas éticos centrales —la accesibilidad y la diseminación, la rectitud del
+	contenido, el control de los medios literarios y la vigilancia, la autoría responsable, así
+	como la moderación del contenido y la censura— representan temas fundamentales para una ética
+	de la literatura. Por ello, el siguiente paso de esta investigación consistirá en explorar cómo
+	la literatura electrónica afronta estos desafíos.
+</p>
 			</article>
 		</div>
 	</section>

@@ -127,9 +127,9 @@
 				<p>Ensayos, escritura académica, trabajo creativo y muestras editoriales disponibles en: <strong>everbeltran.com/writing</strong></p>
 				<ul>
 					<li>Ensayo y crítica</li>
-					<li>Escritura académica</li>
+					<li>Monografías</li>
 					<li>Escritura creativa</li>
-					<li>Trabajo editorial y publicaciones</li>
+					<li>Trabajo editorial</li>
 				</ul>
 			</section>
 
