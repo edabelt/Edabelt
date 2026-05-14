@@ -18,7 +18,7 @@
 	}
 </script>
 
-<nav class="navbar is-light px-5 py-4" aria-label="main navigation">
+<nav class="navbar is-light" aria-label="main navigation">
 	<div class="container is-fluid">
 		<div class="navbar-brand">
 			<a

@@ -79,9 +79,25 @@ main {
    NAVBAR
 ========================= */
 
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar {
-	background: #f6f4ef;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	background: rgba(246, 244, 239, 0.92);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
 	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+	transition:
+		background-color 0.25s ease,
+		backdrop-filter 0.25s ease,
+		box-shadow 0.25s ease;
 }
 
 .navbar-item {
@@ -103,28 +119,43 @@ main {
 	gap: 0.5rem;
 }
 
+/* Prevent content from hiding behind sticky navbar */
+
+html {
+	scroll-padding-top: 6rem;
+}
+
 /* =========================
    FOOTER
 ========================= */
 
-.site-footer {
-	background: #f6f4ef;
-	border-top: 1px solid rgba(0, 0, 0, 0.05);
-	padding: 2rem 1rem;
+/* =========================
+   FOOTER REFINEMENT
+========================= */
 
-	font-size: 0.92rem;
-	line-height: 1.7;
+.site-footer {
+	position: relative;
+
+	background: rgba(246, 244, 239, 0.92);
+
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+
+	border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+	padding: 1.25rem 1rem;
+
+	font-size: 0.88rem;
+	line-height: 1.5;
+
 	color: #666;
 }
 
-.site-footer p {
-	margin-bottom: 0.35rem;
-}
+/* Smooth separation from content */
 
-.site-footer a:hover {
-	text-decoration: underline;
+main {
+	padding-bottom: 4rem;
 }
-
 /* =========================
    HOME
 ========================= */
