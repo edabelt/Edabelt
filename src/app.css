@@ -2893,6 +2893,48 @@ main {
 	gap: 1rem;
 }
 
+.cv-education-list {
+	gap: 0.85rem;
+}
+
+.cv-education-list .cv-timeline-item {
+	grid-template-columns: 1fr;
+	gap: 0.85rem;
+	padding: 1.1rem 1.25rem 1.25rem;
+}
+
+.cv-education-list .cv-timeline-item > div {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 0.35rem 1rem;
+	align-items: start;
+}
+
+.cv-education-list .cv-date {
+	grid-column: 2;
+	grid-row: 1 / span 3;
+	justify-self: end;
+	margin: 0;
+	padding: 0.38rem 0.58rem;
+	border: 1px solid rgba(111, 77, 111, 0.18);
+	border-radius: 999px;
+	background: rgba(111, 77, 111, 0.08);
+	text-align: right;
+	white-space: nowrap;
+}
+
+.cv-education-list h3,
+.cv-education-list .cv-institution,
+.cv-education-list .cv-result {
+	grid-column: 1;
+}
+
+.cv-education-list ul {
+	margin: 0;
+	padding-top: 0.78rem;
+	border-top: 1px solid var(--line);
+}
+
 .cv-date {
 	margin: 0 0 0.45rem;
 	color: var(--plum);
@@ -3042,6 +3084,17 @@ main {
 	.cv-project-grid,
 	.cv-two-column {
 		grid-template-columns: 1fr;
+	}
+
+	.cv-education-list .cv-timeline-item > div {
+		grid-template-columns: 1fr;
+	}
+
+	.cv-education-list .cv-date {
+		grid-column: 1;
+		grid-row: auto;
+		justify-self: start;
+		text-align: left;
 	}
 
 	.landing-project-card,

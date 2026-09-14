@@ -251,9 +251,9 @@
 				</p>
 			</section>
 
-			<section class="cv-section">
+			<section class="cv-section cv-education-section">
 				<h2>Education</h2>
-				<div class="cv-timeline">
+				<div class="cv-timeline cv-education-list">
 					{#each education as item (item.degree)}
 						<article class="cv-timeline-item">
 							<div>
