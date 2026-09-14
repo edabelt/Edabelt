@@ -4,36 +4,31 @@
 			title: 'Chess',
 			kicker: 'Strategy · Pattern · Patience',
 			image: '/images/leisure/chess.jpg',
-			description:
-				'Chess is where I practise slow attention: reading positions, holding several futures in mind, and learning how a small move changes the whole field.'
+			description: 'That is where all my mind becomes a series game field.'
 		},
 		{
 			title: 'Dancing',
 			kicker: 'Rhythm · Body · Listening',
 			image: '/images/leisure/dancing.jpg',
-			description:
-				'Dancing keeps thinking embodied. It trains timing, relation, improvisation, and the kind of perception that happens before language catches up.'
+			description: 'Unconscious expression.'
 		},
 		{
 			title: 'Cooking',
 			kicker: 'Food · Play · Hospitality',
 			image: '/images/leisure/cooking.jpg',
-			description:
-				'I love cooking because, of course, I am a foodie guy: curious about flavour, texture, odd pairings, and the small joy of turning ingredients into a shared scene.'
+			description: 'I am a foodie guy.'
 		},
 		{
 			title: 'Gym',
 			kicker: 'Discipline · Strength · Form',
 			image: '/images/leisure/gym.jpg',
-			description:
-				'Gym is a mirror of weakness. I cannot always be consistent with it, but that is exactly why it matters: it shows me where discipline still has to be built.'
+			description: 'My weakness, I cannot be consistent at it.'
 		},
 		{
 			title: 'Chess boxing',
 			kicker: 'Calculation · Pressure · Control',
 			image: '/images/leisure/chess-boxing.jpg',
-			description:
-				'Chess boxing condenses two kinds of intensity: tactical calm and physical pressure. I like the idea of intelligence that must stay lucid under fatigue. I love to stop philosophising with a punch, mate.'
+			description: 'I love to stop philosophising with a punch, mate.'
 		}
 	];
 </script>
@@ -42,7 +37,7 @@
 	<section class="section">
 		<div class="container is-max-desktop leisure-page">
 			<p class="is-size-7 has-text-grey mb-3">Leisure activities</p>
-			<h1 class="title is-2 mb-5">Leisure as another kind of training.</h1>
+			<h1 class="title is-2 mb-5">Leisure Activities</h1>
 
 			<p class="writing-intro">
 				The activities I return to outside research and development are not separate from how I

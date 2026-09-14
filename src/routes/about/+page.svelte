@@ -241,6 +241,7 @@
 									class:active={theme.id === activeThemeId}
 									style={`--theme-color: ${theme.color}; --depth: ${theme.z}px; left: ${theme.x}%; top: ${theme.y}%;`}
 									aria-pressed={theme.id === activeThemeId}
+									onpointerdown={(event) => event.stopPropagation()}
 									onclick={() => selectResearchTheme(theme.id)}
 									onfocus={() => selectResearchTheme(theme.id)}
 								>
