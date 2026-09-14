@@ -15,8 +15,13 @@
 			date: 'Ene 2025 - Actualidad',
 			result: 'GPA: 78.6%',
 			details: [
-				'Programación, Desarrollo Web 1 y 2, Bases de Datos, Sistemas y Redes, DevOps, Full-Stack Development 1 y 2.',
-				'Proyecto final en curso: plataforma interactiva de datos cinematográficos y cartografía cultural con React, Supabase, D3/ECharts y TMDB API.'
+				{
+					label: 'Módulos seleccionados:',
+					text: 'Programación, Desarrollo Web 1 y 2, Bases de Datos, Sistemas y Redes, DevOps, Full-Stack Development 1 y 2.'
+				},
+				{
+					text: 'Proyecto final en curso: plataforma interactiva de datos cinematográficos y cartografía cultural con React, Supabase, D3/ECharts y TMDB API.'
+				}
 			]
 		},
 		{
@@ -25,8 +30,10 @@
 			date: '2023 - 2025',
 			result: 'First Class Honours',
 			details: [
-				'Disertación: Ética y estética de la narrativa digital.',
-				'Analiza cómo las tecnologías digitales transforman la forma literaria, los procesos computacionales, la datificación del conocimiento y las responsabilidades éticas de las humanidades.'
+				{ label: 'Disertación:', text: 'Ética y estética de la narrativa digital.' },
+				{
+					text: 'Analiza cómo las tecnologías digitales transforman la forma literaria, los procesos computacionales, la datificación del conocimiento y las responsabilidades éticas de las humanidades.'
+				}
 			]
 		},
 		{
@@ -35,8 +42,13 @@
 			date: '2017 - 2019',
 			result: 'Nota media: 8.59/10',
 			details: [
-				'Disertación sobre ética, epistemología, metafísica y estética en Schopenhauer.',
-				'Conecta los límites postkantianos del conocimiento con pensamiento ético, tragedia y experiencia estética.'
+				{
+					label: 'Disertación:',
+					text: 'ética, epistemología, metafísica y estética en Schopenhauer.'
+				},
+				{
+					text: 'Conecta los límites postkantianos del conocimiento con pensamiento ético, tragedia y experiencia estética.'
+				}
 			]
 		},
 		{
@@ -44,7 +56,7 @@
 			institution: 'Pontificia Universidad de Salamanca, España',
 			date: '2013 - 2017',
 			result: 'Nota media: 8.85/10',
-			details: ['Disertación: Escritura creativa.']
+			details: [{ label: 'Disertación:', text: 'Escritura creativa.' }]
 		},
 		{
 			degree: 'Grado en Filosofía',
@@ -264,8 +276,13 @@
 							</div>
 							{#if item.details.length}
 								<ul>
-									{#each item.details as detail (detail)}
-										<li>{detail}</li>
+									{#each item.details as detail (detail.text)}
+										<li>
+											{#if detail.label}
+												<strong>{detail.label}</strong>
+											{/if}
+											{detail.text}
+										</li>
 									{/each}
 								</ul>
 							{/if}

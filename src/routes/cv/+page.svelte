@@ -15,8 +15,13 @@
 			date: 'Jan 2025 - Present',
 			result: 'GPA: 78.6%',
 			details: [
-				'Programming, Web Development 1 & 2, Databases, Systems & Networks, DevOps, Full-Stack Development 1 & 2.',
-				'Final project in progress: an interactive film data and cultural mapping platform built with React, Supabase, D3/ECharts, and the TMDB API.'
+				{
+					label: 'Selected modules:',
+					text: 'Programming, Web Development 1 & 2, Databases, Systems & Networks, DevOps, Full-Stack Development 1 & 2.'
+				},
+				{
+					text: 'Final project in progress: an interactive film data and cultural mapping platform built with React, Supabase, D3/ECharts, and the TMDB API.'
+				}
 			]
 		},
 		{
@@ -25,8 +30,10 @@
 			date: '2023 - 2025',
 			result: 'First Class Honours',
 			details: [
-				'Dissertation: Ethics and Aesthetics of Digital Narrative.',
-				'Examined how digital technologies transform literary form, computational processes, datafied knowledge, and the ethical responsibilities of the humanities.'
+				{ label: 'Dissertation:', text: 'Ethics and Aesthetics of Digital Narrative.' },
+				{
+					text: 'Examined how digital technologies transform literary form, computational processes, datafied knowledge, and the ethical responsibilities of the humanities.'
+				}
 			]
 		},
 		{
@@ -35,8 +42,13 @@
 			date: '2017 - 2019',
 			result: 'GPA: 8.59/10',
 			details: [
-				'Dissertation on ethics, epistemology, metaphysics, and aesthetics in Schopenhauer.',
-				'Connected post-Kantian limits of knowledge with ethical thought, tragedy, and aesthetic experience.'
+				{
+					label: 'Dissertation:',
+					text: 'Ethics, epistemology, metaphysics, and aesthetics in Schopenhauer.'
+				},
+				{
+					text: 'Connected post-Kantian limits of knowledge with ethical thought, tragedy, and aesthetic experience.'
+				}
 			]
 		},
 		{
@@ -44,7 +56,7 @@
 			institution: 'Pontifical University of Salamanca, Spain',
 			date: '2013 - 2017',
 			result: 'GPA: 8.85/10',
-			details: ['Dissertation: Creative Writing.']
+			details: [{ label: 'Dissertation:', text: 'Creative Writing.' }]
 		},
 		{
 			degree: 'BA Philosophy',
@@ -264,8 +276,13 @@
 							</div>
 							{#if item.details.length}
 								<ul>
-									{#each item.details as detail (detail)}
-										<li>{detail}</li>
+									{#each item.details as detail (detail.text)}
+										<li>
+											{#if detail.label}
+												<strong>{detail.label}</strong>
+											{/if}
+											{detail.text}
+										</li>
 									{/each}
 								</ul>
 							{/if}
