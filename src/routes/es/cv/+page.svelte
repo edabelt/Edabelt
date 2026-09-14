@@ -13,7 +13,7 @@
 			degree: 'Higher Diploma in Computer Science',
 			institution: 'South East Technological University, Irlanda',
 			date: 'Ene 2025 - Actualidad',
-			result: 'GPA: 78.6%',
+			result: 'First Class Honours (resultado parcial)',
 			details: [
 				{
 					label: 'Módulos seleccionados:',
