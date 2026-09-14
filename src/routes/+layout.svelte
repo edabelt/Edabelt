@@ -16,6 +16,31 @@
 	function closeMenu() {
 		isMenuOpen = false;
 	}
+
+	const currentPath = () => {
+		const path = page.url.pathname.replace(/\/$/, '');
+		return path || '/';
+	};
+
+	const isHomePage = () => currentPath() === '/' || currentPath() === '/es';
+
+	const backHref = () => {
+		const path = currentPath();
+
+		if (path.startsWith('/es/writing/')) return '/es/writing';
+		if (path.startsWith('/writing/')) return '/writing';
+
+		return isSpanish() ? '/es' : '/';
+	};
+
+	const backLabel = () => {
+		const path = currentPath();
+
+		if (path.startsWith('/es/writing/')) return 'Volver a escritura';
+		if (path.startsWith('/writing/')) return 'Back to writing';
+
+		return isSpanish() ? 'Volver al inicio' : 'Back home';
+	};
 </script>
 
 <nav class="navbar is-light" aria-label="main navigation">
@@ -43,91 +68,72 @@
 			</button>
 		</div>
 
-		<div
-			class="navbar-menu"
-			class:is-active={isMenuOpen}
-		>
+		<div class="navbar-menu" class:is-active={isMenuOpen}>
 			<div class="navbar-end">
 				{#if isSpanish()}
-					<a class="navbar-item" href="/es/about" onclick={closeMenu}>
-						Sobre mí
-					</a>
+					<a class="navbar-item" href="/es/about" onclick={closeMenu}> Sobre mí </a>
 
-					<a class="navbar-item" href="/es/cv" onclick={closeMenu}>
-						CV
-					</a>
+					<a class="navbar-item" href="/es/cv" onclick={closeMenu}> CV </a>
 
-					<a class="navbar-item" href="/es/writing" onclick={closeMenu}>
-						Escritura
-					</a>
+					<a class="navbar-item" href="/es/writing" onclick={closeMenu}> Escritura </a>
 
-					<a class="navbar-item" href="/es/projects" onclick={closeMenu}>
-						Proyectos
-					</a>
+					<a class="navbar-item" href="/es/projects" onclick={closeMenu}> Proyectos </a>
 
-					<a class="navbar-item" href="/es/contact" onclick={closeMenu}>
-						Contacto
-					</a>
+					<a class="navbar-item" href="/es/leisure" onclick={closeMenu}> Ocio </a>
+
+					<a class="navbar-item" href="/es/contact" onclick={closeMenu}> Contacto </a>
 				{:else}
-					<a class="navbar-item" href="/about" onclick={closeMenu}>
-						About
-					</a>
+					<a class="navbar-item" href="/about" onclick={closeMenu}> About </a>
 
-					<a class="navbar-item" href="/cv" onclick={closeMenu}>
-						CV
-					</a>
+					<a class="navbar-item" href="/cv" onclick={closeMenu}> CV </a>
 
-					<a class="navbar-item" href="/writing" onclick={closeMenu}>
-						Writing
-					</a>
+					<a class="navbar-item" href="/writing" onclick={closeMenu}> Writing </a>
 
-					<a class="navbar-item" href="/projects" onclick={closeMenu}>
-						Projects
-					</a>
+					<a class="navbar-item" href="/projects" onclick={closeMenu}> Projects </a>
 
-					<a class="navbar-item" href="/contact" onclick={closeMenu}>
-						Contact
-					</a>
+					<a class="navbar-item" href="/leisure" onclick={closeMenu}> Leisure </a>
+
+					<a class="navbar-item" href="/contact" onclick={closeMenu}> Contact </a>
 				{/if}
 
 				<div class="navbar-item language-switcher">
-					<a href="/" onclick={closeMenu}>
-						🇬🇧 EN
-					</a>
+					<a href="/" onclick={closeMenu}> 🇬🇧 EN </a>
 
 					<span class="mx-2">|</span>
 
-					<a href="/es" onclick={closeMenu}>
-						🇪🇸 ES
-					</a>
+					<a href="/es" onclick={closeMenu}> 🇪🇸 ES </a>
 				</div>
 			</div>
 		</div>
 	</div>
 </nav>
 
+{#if !isHomePage()}
+	<div
+		class="page-back-shell"
+		aria-label={isSpanish() ? 'Navegación secundaria' : 'Secondary navigation'}
+	>
+		<a class="page-back-link" href={backHref()}>
+			<span aria-hidden="true">←</span>
+			{backLabel()}
+		</a>
+	</div>
+{/if}
+
 {@render children()}
 
 <footer class="site-footer">
 	<div class="content has-text-centered">
-		<p class="mb-1">
-			© 2026 Ever David Beltrán Pinto
-		</p>
+		<p class="mb-1">© 2026 Ever David Beltrán Pinto</p>
 
 		{#if isSpanish()}
-			<p class="mb-1">
-				Computación, investigación y escritura en cultura digital.
-			</p>
+			<p class="mb-1">Computación, investigación y escritura en cultura digital.</p>
 		{:else}
-			<p class="mb-1">
-				Computing, research, and writing across digital culture.
-			</p>
+			<p class="mb-1">Computing, research, and writing across digital culture.</p>
 		{/if}
 
 		<p>
-			<a href="mailto:edbeltranpi.chs@gmail.com">
-				edbeltranpi.chs@gmail.com
-			</a>
+			<a href="mailto:edbeltranpi.chs@gmail.com"> edbeltranpi.chs@gmail.com </a>
 
 			·
 
@@ -141,13 +147,7 @@
 
 			·
 
-			<a
-				href="https://github.com/edabelt"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				GitHub
-			</a>
+			<a href="https://github.com/edabelt" target="_blank" rel="noopener noreferrer"> GitHub </a>
 		</p>
 	</div>
 </footer>

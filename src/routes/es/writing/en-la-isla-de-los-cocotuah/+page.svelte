@@ -1,8 +1,6 @@
 <main>
 	<section class="section">
 		<div class="container article-page">
-			<a class="is-size-7" href="/es/writing">← Volver a Escritura</a>
-
 			<h1 class="title is-2 mt-5">En la isla de los Cocotuah</h1>
 
 			<p class="article-meta">
