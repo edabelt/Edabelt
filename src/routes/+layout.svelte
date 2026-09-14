@@ -1,46 +1,51 @@
 <script>
 	import 'bulma/css/bulma.min.css';
 	import '../app.css';
-	import { page } from '$app/state';
+	import { browser } from '$app/environment';
+	import { afterNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-	let { children } = $props();
+	let { children, data } = $props();
 
 	let isMenuOpen = $state(false);
+	let routePath = $state('');
 
-	const isSpanish = () => page.url.pathname.startsWith('/es');
+	const currentPath = $derived(normalizePath(routePath || data.pathname));
+	const isSpanish = $derived(currentPath.startsWith('/es'));
+	const backHref = $derived.by(() => {
+		if (currentPath.startsWith('/es/writing/')) return '/es/writing';
+		if (currentPath.startsWith('/writing/')) return '/writing';
 
-	function toggleMenu() {
-		isMenuOpen = !isMenuOpen;
+		return isSpanish ? '/es' : '/';
+	});
+	const backLabel = $derived.by(() => {
+		if (currentPath.startsWith('/es/writing/')) return 'Volver a escritura';
+		if (currentPath.startsWith('/writing/')) return 'Back to writing';
+
+		return isSpanish ? 'Volver al inicio' : 'Back home';
+	});
+
+	function normalizePath(path) {
+		return path.replace(/\/$/, '') || '/';
 	}
 
 	function closeMenu() {
 		isMenuOpen = false;
 	}
 
-	const currentPath = () => {
-		const path = page.url.pathname.replace(/\/$/, '');
-		return path || '/';
-	};
+	function toggleMenu() {
+		isMenuOpen = !isMenuOpen;
+	}
 
-	const isHomePage = () => currentPath() === '/' || currentPath() === '/es';
+	onMount(() => {
+		routePath = normalizePath(window.location.pathname);
+	});
 
-	const backHref = () => {
-		const path = currentPath();
-
-		if (path.startsWith('/es/writing/')) return '/es/writing';
-		if (path.startsWith('/writing/')) return '/writing';
-
-		return isSpanish() ? '/es' : '/';
-	};
-
-	const backLabel = () => {
-		const path = currentPath();
-
-		if (path.startsWith('/es/writing/')) return 'Volver a escritura';
-		if (path.startsWith('/writing/')) return 'Back to writing';
-
-		return isSpanish() ? 'Volver al inicio' : 'Back home';
-	};
+	afterNavigate(({ to }) => {
+		routePath = normalizePath(
+			to?.url.pathname || (browser ? window.location.pathname : data.pathname)
+		);
+	});
 </script>
 
 <nav class="navbar is-light" aria-label="main navigation">
@@ -48,7 +53,7 @@
 		<div class="navbar-brand">
 			<a
 				class="navbar-item has-text-weight-semibold"
-				href={isSpanish() ? '/es' : '/'}
+				href={isSpanish ? '/es' : '/'}
 				onclick={closeMenu}
 			>
 				EB
@@ -70,31 +75,38 @@
 
 		<div class="navbar-menu" class:is-active={isMenuOpen}>
 			<div class="navbar-end">
-				{#if isSpanish()}
-					<a class="navbar-item" href="/es/about" onclick={closeMenu}> Sobre mí </a>
+				<a class="navbar-item" href={isSpanish ? '/es' : '/'} onclick={closeMenu}>
+					{isSpanish ? 'Inicio' : 'Home'}
+				</a>
 
-					<a class="navbar-item" href="/es/cv" onclick={closeMenu}> CV </a>
+				<a class="navbar-item" href={isSpanish ? '/es/about' : '/about'} onclick={closeMenu}>
+					{isSpanish ? 'Sobre mí' : 'About'}
+				</a>
 
-					<a class="navbar-item" href="/es/writing" onclick={closeMenu}> Escritura </a>
+				<a
+					class="navbar-item"
+					href={isSpanish ? '/es/cv' : '/cv'}
+					data-sveltekit-reload
+					onclick={closeMenu}
+				>
+					CV
+				</a>
 
-					<a class="navbar-item" href="/es/projects" onclick={closeMenu}> Proyectos </a>
+				<a class="navbar-item" href={isSpanish ? '/es/writing' : '/writing'} onclick={closeMenu}>
+					{isSpanish ? 'Escritura' : 'Writing'}
+				</a>
 
-					<a class="navbar-item" href="/es/leisure" onclick={closeMenu}> Ocio </a>
+				<a class="navbar-item" href={isSpanish ? '/es/projects' : '/projects'} onclick={closeMenu}>
+					{isSpanish ? 'Proyectos' : 'Projects'}
+				</a>
 
-					<a class="navbar-item" href="/es/contact" onclick={closeMenu}> Contacto </a>
-				{:else}
-					<a class="navbar-item" href="/about" onclick={closeMenu}> About </a>
+				<a class="navbar-item" href={isSpanish ? '/es/leisure' : '/leisure'} onclick={closeMenu}>
+					{isSpanish ? 'Ocio' : 'Leisure'}
+				</a>
 
-					<a class="navbar-item" href="/cv" onclick={closeMenu}> CV </a>
-
-					<a class="navbar-item" href="/writing" onclick={closeMenu}> Writing </a>
-
-					<a class="navbar-item" href="/projects" onclick={closeMenu}> Projects </a>
-
-					<a class="navbar-item" href="/leisure" onclick={closeMenu}> Leisure </a>
-
-					<a class="navbar-item" href="/contact" onclick={closeMenu}> Contact </a>
-				{/if}
+				<a class="navbar-item" href={isSpanish ? '/es/contact' : '/contact'} onclick={closeMenu}>
+					{isSpanish ? 'Contacto' : 'Contact'}
+				</a>
 
 				<div class="navbar-item language-switcher">
 					<a href="/" onclick={closeMenu}> 🇬🇧 EN </a>
@@ -108,17 +120,15 @@
 	</div>
 </nav>
 
-{#if !isHomePage()}
-	<div
-		class="page-back-shell"
-		aria-label={isSpanish() ? 'Navegación secundaria' : 'Secondary navigation'}
-	>
-		<a class="page-back-link" href={backHref()}>
-			<span aria-hidden="true">←</span>
-			{backLabel()}
-		</a>
-	</div>
-{/if}
+<div
+	class="page-back-shell"
+	aria-label={isSpanish ? 'Navegación secundaria' : 'Secondary navigation'}
+>
+	<a class="page-back-link" href={backHref}>
+		<span aria-hidden="true">←</span>
+		{backLabel}
+	</a>
+</div>
 
 {@render children()}
 
@@ -126,11 +136,11 @@
 	<div class="content has-text-centered">
 		<p class="mb-1">© 2026 Ever David Beltrán Pinto</p>
 
-		{#if isSpanish()}
-			<p class="mb-1">Computación, investigación y escritura en cultura digital.</p>
-		{:else}
-			<p class="mb-1">Computing, research, and writing across digital culture.</p>
-		{/if}
+		<p class="mb-1">
+			{isSpanish
+				? 'Computación, investigación y escritura en cultura digital.'
+				: 'Computing, research, and writing across digital culture.'}
+		</p>
 
 		<p>
 			<a href="mailto:edbeltranpi.chs@gmail.com"> edbeltranpi.chs@gmail.com </a>

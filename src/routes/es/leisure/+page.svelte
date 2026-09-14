@@ -4,36 +4,31 @@
 			title: 'Ajedrez',
 			kicker: 'Estrategia · Patrón · Paciencia',
 			image: '/images/leisure/chess.jpg',
-			description:
-				'El ajedrez es una práctica de atención lenta: leer posiciones, sostener varios futuros a la vez y ver cómo una pequeña jugada transforma todo el campo.'
+			description: 'That is where all my mind becomes a serious game field.'
 		},
 		{
 			title: 'Baile',
 			kicker: 'Ritmo · Cuerpo · Escucha',
 			image: '/images/leisure/dancing.jpg',
-			description:
-				'Bailar mantiene el pensamiento encarnado. Entrena el tiempo, la relación, la improvisación y una percepción que ocurre antes de que el lenguaje la alcance.'
+			description: 'Unconscious expression.'
 		},
 		{
 			title: 'Cocina',
 			kicker: 'Comida · Juego · Hospitalidad',
 			image: '/images/leisure/cooking.jpg',
-			description:
-				'Me encanta cocinar porque, por supuesto, soy un foodie guy: curioso por el sabor, la textura, las combinaciones raras y la alegría de convertir ingredientes en una escena compartida.'
+			description: 'I am a foodie guy.'
 		},
 		{
 			title: 'Gimnasio',
 			kicker: 'Disciplina · Fuerza · Forma',
 			image: '/images/leisure/gym.jpg',
-			description:
-				'El gimnasio es un espejo de la debilidad. No siempre logro ser consistente, y por eso mismo importa: me muestra dónde todavía debo construir disciplina.'
+			description: 'My weakness, I cannot be consistent at it.'
 		},
 		{
 			title: 'Chess boxing',
 			kicker: 'Cálculo · Presión · Control',
 			image: '/images/leisure/chess-boxing.jpg',
-			description:
-				'El chess boxing concentra dos intensidades: calma táctica y presión física. Me interesa esa inteligencia que debe seguir lúcida bajo fatiga. Me encanta dejar de filosofar con un golpe, mate.'
+			description: 'I love to stop philosophising with a punch, mate.'
 		}
 	];
 </script>
