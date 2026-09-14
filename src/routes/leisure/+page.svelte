@@ -4,7 +4,7 @@
 			title: 'Chess',
 			kicker: 'Strategy · Pattern · Patience',
 			image: '/images/leisure/chess.jpg',
-			description: 'That is where all my mind becomes a series game field.'
+			description: 'That is where all my mind becomes a serious game field.'
 		},
 		{
 			title: 'Dancing',
