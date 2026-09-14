@@ -110,12 +110,7 @@
 	];
 
 	let activeThemeId = $state('digital-narrative');
-	let researchRotationY = $state(0);
-	let isResearchMapDragging = $state(false);
 	let isResearchMapZoomed = $state(false);
-	let dragStartX = 0;
-	let dragStartRotationY = 0;
-	let suppressNextThemeSelection = false;
 
 	const activeTheme = $derived(
 		researchThemes.find((theme) => theme.id === activeThemeId) ?? researchThemes[0]
@@ -124,44 +119,8 @@
 	const getTheme = (id) => researchThemes.find((theme) => theme.id === id);
 	const isConnectionActive = ([source, target]) =>
 		source === activeThemeId || target === activeThemeId;
-	const normalizeRotation = (degrees) => Number((((degrees % 360) + 360) % 360).toFixed(2));
-
-	function startResearchMapDrag(event) {
-		isResearchMapDragging = true;
-		suppressNextThemeSelection = false;
-		dragStartX = event.clientX;
-		dragStartRotationY = researchRotationY;
-		event.currentTarget.setPointerCapture?.(event.pointerId);
-	}
-
-	function dragResearchMap(event) {
-		if (!isResearchMapDragging) return;
-
-		if (Math.abs(event.clientX - dragStartX) > 4) {
-			suppressNextThemeSelection = true;
-		}
-
-		researchRotationY = normalizeRotation(dragStartRotationY + (event.clientX - dragStartX) * 0.2);
-	}
-
-	function stopResearchMapDrag(event) {
-		isResearchMapDragging = false;
-		event.currentTarget.releasePointerCapture?.(event.pointerId);
-		if (suppressNextThemeSelection) {
-			setTimeout(() => {
-				suppressNextThemeSelection = false;
-			}, 0);
-		}
-	}
-
-	function resetResearchMapRotation() {
-		researchRotationY = 0;
-		isResearchMapZoomed = false;
-	}
 
 	function selectResearchTheme(id) {
-		if (suppressNextThemeSelection) return;
-
 		activeThemeId = id;
 		isResearchMapZoomed = true;
 	}
@@ -202,19 +161,13 @@
 				<div class="research-map-shell">
 					<div
 						class="research-network"
-						class:is-dragging={isResearchMapDragging}
 						class:is-zoomed={isResearchMapZoomed}
 						role="presentation"
 						aria-label="Mapa interactivo de investigación"
-						onpointerdown={startResearchMapDrag}
-						onpointermove={dragResearchMap}
-						onpointerup={stopResearchMapDrag}
-						onpointercancel={stopResearchMapDrag}
-						ondblclick={resetResearchMapRotation}
 					>
 						<div
 							class="research-space"
-							style={`--tilt-y: ${researchRotationY}deg; --base-tilt: ${isResearchMapZoomed ? 50 : 58}deg; --node-counter-tilt: -${isResearchMapZoomed ? 50 : 58}deg; --map-scale: ${isResearchMapZoomed ? 0.9 : 1};`}
+							style={`--base-tilt: ${isResearchMapZoomed ? 50 : 58}deg; --node-counter-tilt: -${isResearchMapZoomed ? 50 : 58}deg; --map-scale: ${isResearchMapZoomed ? 0.9 : 1};`}
 						>
 							<div class="research-depth-floor" aria-hidden="true"></div>
 							<div class="research-depth-orbit research-depth-orbit-one" aria-hidden="true"></div>
@@ -243,7 +196,6 @@
 									class:active={theme.id === activeThemeId}
 									style={`--theme-color: ${theme.color}; --depth: ${theme.z}px; left: ${theme.x}%; top: ${theme.y}%;`}
 									aria-pressed={theme.id === activeThemeId}
-									onpointerdown={(event) => event.stopPropagation()}
 									onclick={() => selectResearchTheme(theme.id)}
 									onfocus={() => selectResearchTheme(theme.id)}
 								>
