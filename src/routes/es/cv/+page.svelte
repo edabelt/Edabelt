@@ -12,7 +12,7 @@
 		{
 			degree: 'Higher Diploma in Computer Science',
 			institution: 'South East Technological University, Irlanda',
-			date: 'Ene 2025 - Actualidad',
+			date: 'Ene 2025 - Dic 2026 (previsto)',
 			result: 'First Class Honours (resultado parcial)',
 			details: [
 				{
