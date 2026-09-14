@@ -112,7 +112,7 @@
 						<span>Map mode · Evidence trail</span>
 					</div>
 					<div class="interface-status-row">
-						{#each atlasSteps as step, index}
+						{#each atlasSteps as step, index (step)}
 							<button
 								type="button"
 								class:is-active={atlasStep === index}
@@ -179,19 +179,19 @@
 							</span>
 							<div class="atlas-choice-grid">
 								{#if atlasStep === 0}
-									{#each atlasCountries as country}
+									{#each atlasCountries as country (country)}
 										<button type="button" onclick={() => chooseCountry(country)}>{country}</button>
 									{/each}
 								{:else if atlasStep === 1}
-									{#each atlasGenres as genre}
+									{#each atlasGenres as genre (genre)}
 										<button type="button" onclick={() => chooseGenre(genre)}>{genre}</button>
 									{/each}
 								{:else if atlasStep === 2}
-									{#each atlasThemes as theme}
+									{#each atlasThemes as theme (theme)}
 										<button type="button" onclick={() => chooseTheme(theme)}>{theme}</button>
 									{/each}
 								{:else if atlasStep === 3}
-									{#each atlasFilms as film}
+									{#each atlasFilms as film (film)}
 										<button type="button" onclick={() => chooseFilm(film)}>{film}</button>
 									{/each}
 								{:else}
@@ -357,7 +357,7 @@
 									rel="noopener noreferrer"
 									aria-label="Open The Wandering Desk live demo"
 								>
-									<span class="project-card-wordmark">The Wandering Desk</span>
+									<img src="/images/projects/wandering-desk-logo.svg" alt="" />
 									<span class="project-cover-label">Frontend · Backend · API</span>
 								</a>
 								<p class="project-meta">Multi-repo · Full-stack · API architecture</p>

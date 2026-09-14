@@ -51,7 +51,7 @@
 			</p>
 
 			<div class="leisure-grid">
-				{#each leisureActivities as activity}
+				{#each leisureActivities as activity (activity.title)}
 					<article class="leisure-card">
 						<img src={activity.image} alt="" loading="lazy" />
 						<div class="leisure-card-body">

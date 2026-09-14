@@ -52,7 +52,11 @@
 					href: '/es/projects',
 					logo: '/images/projects/daddy-movies-logo.svg'
 				},
-				{ label: 'The Wandering Desk', href: '/es/projects' },
+				{
+					label: 'The Wandering Desk',
+					href: '/es/projects',
+					logo: '/images/projects/wandering-desk-logo.svg'
+				},
 				{ label: 'Edabelt', href: '/es/projects', logo: '/images/projects/edabelt-logo.svg' },
 				{
 					label: 'WeatherTop-IoT',
@@ -229,7 +233,7 @@
 				</p>
 
 				<div class="landing-capabilities" aria-label="Capacidades técnicas">
-					{#each capabilities as capability}
+					{#each capabilities as capability (capability)}
 						<span>{capability}</span>
 					{/each}
 				</div>
@@ -249,7 +253,7 @@
 						</div>
 
 						<svg class="site-network-lines" viewBox="0 0 100 100" aria-hidden="true">
-							{#each siteConnections as connection}
+							{#each siteConnections as connection (`${connection.from}-${connection.to}`)}
 								{@const source = getSiteNode(connection.from)}
 								{@const target = getSiteNode(connection.to)}
 								{#if source && target}
@@ -264,7 +268,7 @@
 							{/each}
 						</svg>
 
-						{#each siteNodes as node}
+						{#each siteNodes as node (node.id)}
 							{#if isExpandableNode(node)}
 								<button
 									type="button"
@@ -296,21 +300,21 @@
 						<p>{activeSiteNode.description}</p>
 
 						<div class="site-node-tags">
-							{#each activeSiteNode.tags as tag}
+							{#each activeSiteNode.tags as tag (tag)}
 								<span>{tag}</span>
 							{/each}
 						</div>
 
 						<div class="site-node-connections">
 							<p>Enlaces entre páginas</p>
-							{#each siteConnections.filter(isSiteConnectionActive) as connection}
+							{#each siteConnections.filter(isSiteConnectionActive) as connection (`${connection.from}-${connection.to}`)}
 								<span>{connection.label}</span>
 							{/each}
 						</div>
 
 						<div class="site-node-previews">
 							<p>{activeSiteNode.previewTitle}</p>
-							{#each activeSiteNode.previews as preview}
+							{#each activeSiteNode.previews as preview (preview.label)}
 								<a href={preview.href}>
 									{#if preview.logo}
 										<img src={preview.logo} alt="" loading="lazy" />

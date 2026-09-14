@@ -22,7 +22,9 @@
 					<div class="box is-shadowless contact-box">
 						<p class="contact-label whatsapp">🟢 WhatsApp (Irlanda)</p>
 						<p class="contact-value">
-							<a href="https://wa.me/353857380379" target="_blank">+353 85 738 0379</a>
+							<a href="https://wa.me/353857380379" target="_blank" rel="noopener noreferrer"
+								>+353 85 738 0379</a
+							>
 						</p>
 					</div>
 				</div>
@@ -31,7 +33,9 @@
 					<div class="box is-shadowless contact-box">
 						<p class="contact-label whatsapp">🟢 WhatsApp (España)</p>
 						<p class="contact-value">
-							<a href="https://wa.me/34692364902" target="_blank">+34 692 364 902</a>
+							<a href="https://wa.me/34692364902" target="_blank" rel="noopener noreferrer"
+								>+34 692 364 902</a
+							>
 						</p>
 					</div>
 				</div>
@@ -40,8 +44,15 @@
 					<div class="box is-shadowless contact-box">
 						<p class="contact-label">🔗 Perfiles</p>
 						<p class="contact-value">
-							<a href="https://github.com/edabelt" target="_blank">GitHub</a> ·
-							<a href="https://www.linkedin.com/in/davidbeltranpinto/" target="_blank">LinkedIn</a>
+							<a href="https://github.com/edabelt" target="_blank" rel="noopener noreferrer"
+								>GitHub</a
+							>
+							·
+							<a
+								href="https://www.linkedin.com/in/davidbeltranpinto/"
+								target="_blank"
+								rel="noopener noreferrer">LinkedIn</a
+							>
 						</p>
 					</div>
 				</div>

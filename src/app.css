@@ -1730,6 +1730,7 @@ main {
 	gap: 1rem;
 	align-items: start;
 	margin-top: 1.1rem;
+	min-width: 0;
 }
 
 .research-network {
@@ -1752,7 +1753,8 @@ main {
 .research-space {
 	position: absolute;
 	inset: 8% 6% 10%;
-	transform: rotateX(var(--base-tilt, 58deg)) rotateY(0deg) rotateZ(-7deg) scale(var(--map-scale, 1));
+	transform: rotateX(var(--base-tilt, 58deg)) rotateY(0deg) rotateZ(-7deg)
+		scale(var(--map-scale, 1));
 	transform-origin: 50% 50%;
 	transform-style: preserve-3d;
 	transition:
@@ -1911,6 +1913,7 @@ main {
 	align-self: start;
 	gap: 0.52rem 1rem;
 	width: 100%;
+	min-width: 0;
 	max-width: none;
 	padding: 0.95rem 1.05rem;
 	background:
@@ -1940,6 +1943,7 @@ main {
 	color: var(--ink);
 	font-size: clamp(1.24rem, 2.1vw, 1.68rem);
 	line-height: 1.05;
+	overflow-wrap: anywhere;
 }
 
 .research-live-panel p {
@@ -1950,6 +1954,7 @@ main {
 	font-size: 0.88rem;
 	line-height: 1.44;
 	text-align: left;
+	overflow-wrap: anywhere;
 }
 
 .research-live-panel strong {
@@ -1961,6 +1966,7 @@ main {
 	color: var(--ink);
 	font-size: 0.88rem;
 	line-height: 1.38;
+	overflow-wrap: anywhere;
 }
 
 .method-tags {
@@ -2974,8 +2980,19 @@ main {
 	}
 
 	.research-live-panel {
-		width: min(100%, 21rem);
+		grid-template-areas:
+			'eyebrow title'
+			'claim claim'
+			'question question'
+			'methods methods';
+		grid-template-columns: minmax(7rem, 0.32fr) minmax(0, 1fr);
+		width: 100%;
 		max-width: none;
+	}
+
+	.research-live-panel p,
+	.research-live-panel strong {
+		align-self: start;
 	}
 
 	.console-body {

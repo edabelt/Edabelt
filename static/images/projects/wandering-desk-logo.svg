@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+	<title id="title">The Wandering Desk logo</title>
+	<desc id="desc">A turquoise location pin with a laptop and coffee cup inside.</desc>
+	<rect width="640" height="640" rx="48" fill="#f8f8f7"/>
+	<path
+		fill="#11cdb9"
+		d="M320 60c-107.4 0-194.8 87.4-194.8 194.8 0 139.3 166.5 318.7 173.6 326.3 11.5 12.3 30.8 12.3 42.4 0 7.1-7.6 173.6-187 173.6-326.3C514.8 147.4 427.4 60 320 60Z"
+	/>
+	<circle cx="320" cy="257" r="102" fill="#fff"/>
+	<g fill="none" stroke="#11cdb9" stroke-linecap="round" stroke-linejoin="round" stroke-width="10">
+		<path d="M255 311h130l30 34H225l30-34Z"/>
+		<path d="M260 185h120a8 8 0 0 1 8 8v118H252V193a8 8 0 0 1 8-8Z"/>
+		<path d="M302 345h36"/>
+		<path d="M293 238h48v23a24 24 0 0 1-24 24 24 24 0 0 1-24-24v-23Z"/>
+		<path d="M341 247h14c10 0 17 7 17 16s-7 16-17 16h-15"/>
+		<path d="M305 215c-8-9 8-15 0-25"/>
+		<path d="M326 215c-8-9 8-15 0-25"/>
+	</g>
+</svg>

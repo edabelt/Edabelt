@@ -208,8 +208,11 @@
 					>
 					<a href="mailto:edbeltranpi.chs@gmail.com">Email</a>
 					<a href="https://github.com/edabelt" target="_blank" rel="noopener noreferrer">GitHub</a>
-					<a class="button is-light" href="/files/Ever_David_Beltran_CV.pdf" target="_blank"
-						>Download PDF</a
+					<a
+						class="button is-light"
+						href="/files/Ever_David_Beltran_CV.pdf"
+						target="_blank"
+						rel="noopener noreferrer">Download PDF</a
 					>
 				</div>
 			</div>
@@ -232,7 +235,7 @@
 			{/if}
 
 			<div class="cv-highlight-grid" aria-label="CV highlights">
-				{#each highlights as highlight}
+				{#each highlights as highlight (highlight)}
 					<span>{highlight}</span>
 				{/each}
 			</div>
@@ -251,7 +254,7 @@
 			<section class="cv-section">
 				<h2>Education</h2>
 				<div class="cv-timeline">
-					{#each education as item}
+					{#each education as item (item.title)}
 						<article class="cv-timeline-item">
 							<div>
 								<p class="cv-date">{item.date}</p>
@@ -261,7 +264,7 @@
 							</div>
 							{#if item.details.length}
 								<ul>
-									{#each item.details as detail}
+									{#each item.details as detail (detail)}
 										<li>{detail}</li>
 									{/each}
 								</ul>
@@ -274,17 +277,17 @@
 			<section class="cv-section">
 				<h2>Selected Projects</h2>
 				<div class="cv-project-grid">
-					{#each projects as project}
+					{#each projects as project (project.title)}
 						<article class="cv-project-card">
 							<p class="project-type">{project.type}</p>
 							<h3>{project.name}</h3>
 							<ul>
-								{#each project.points as point}
+								{#each project.points as point (point)}
 									<li>{point}</li>
 								{/each}
 							</ul>
 							<div class="project-link-row">
-								{#each project.links as link}
+								{#each project.links as link (link.href)}
 									<a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
 								{/each}
 							</div>
@@ -296,7 +299,7 @@
 			<section class="cv-section">
 				<h2>Technical Skills</h2>
 				<div class="cv-skill-cloud">
-					{#each skills as skill}
+					{#each skills as skill (skill.title)}
 						<span>{skill}</span>
 					{/each}
 				</div>

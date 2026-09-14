@@ -174,7 +174,7 @@
 							<div class="research-depth-orbit research-depth-orbit-two" aria-hidden="true"></div>
 
 							<svg viewBox="0 0 100 100" aria-hidden="true" class="research-network-lines">
-								{#each themeConnections as connection}
+								{#each themeConnections as connection (`${connection[0]}-${connection[1]}`)}
 									{@const source = getTheme(connection[0])}
 									{@const target = getTheme(connection[1])}
 									{#if source && target}
@@ -189,7 +189,7 @@
 								{/each}
 							</svg>
 
-							{#each researchThemes as theme}
+							{#each researchThemes as theme (theme.id)}
 								<button
 									type="button"
 									class="research-node"
@@ -211,7 +211,7 @@
 						<p>{activeTheme.claim}</p>
 						<strong>{activeTheme.question}</strong>
 						<div class="method-tags" aria-label="Métodos">
-							{#each activeTheme.methods as method}
+							{#each activeTheme.methods as method (method)}
 								<em>{method}</em>
 							{/each}
 						</div>
