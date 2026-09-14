@@ -254,7 +254,7 @@
 			<section class="cv-section">
 				<h2>Education</h2>
 				<div class="cv-timeline">
-					{#each education as item (item.title)}
+					{#each education as item (item.degree)}
 						<article class="cv-timeline-item">
 							<div>
 								<p class="cv-date">{item.date}</p>
@@ -277,7 +277,7 @@
 			<section class="cv-section">
 				<h2>Selected Projects</h2>
 				<div class="cv-project-grid">
-					{#each projects as project (project.title)}
+					{#each projects as project (project.name)}
 						<article class="cv-project-card">
 							<p class="project-type">{project.type}</p>
 							<h3>{project.name}</h3>
@@ -299,7 +299,7 @@
 			<section class="cv-section">
 				<h2>Technical Skills</h2>
 				<div class="cv-skill-cloud">
-					{#each skills as skill (skill.title)}
+					{#each skills as skill (skill)}
 						<span>{skill}</span>
 					{/each}
 				</div>
